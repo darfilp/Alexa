@@ -1,0 +1,26 @@
+.video
+    padding: 100px 20px
+    &__player
+        padding: 0 20px 0px 20px
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            position: relative
+            width: 100%
+            height: 705px
+        button
+    &__btn
+        background-color: transparent
+        cursor: pointer
+        transition: transform .3s
+        position: absolute
+        top: 278px
+        left: calc(50% - 137px)
+        svg
+            z-index: 11
+            width: 129.86px
+            height: 130px
+    &__btn:hover
+        transform: scale(1.1)
