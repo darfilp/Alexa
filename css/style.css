@@ -478,6 +478,72 @@ button {
   color: #BDAE82;
 }
 
+.menu__btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  padding: 12.5px 0;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+
+.menu__btn span {
+  display: block;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu__btn-active span {
+  display: none;
+}
+
+.menu__btn-active::before {
+  top: 30px;
+}
+
+.menu__btn::after, .menu__btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu__btn::after {
+  bottom: 11px;
+}
+
+.menu__btn::before {
+  top: 11px;
+}
+
+.menu__btn-active::before {
+  top: 2px;
+  height: 2px;
+  width: 127%;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu__btn-active::after {
+  bottom: 0;
+  height: 2px;
+  width: 130%;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .hero {
   background-image: url("../assets/img/bg.jpg");
   background-position: center -90px;
@@ -878,5 +944,365 @@ button {
 
 .footer__icon {
   width: 32px;
+}
+
+@media (max-width: 1439px) {
+  .contacts__wrapper {
+    padding-left: 300px;
+  }
+}
+
+@media (max-width: 1413px) {
+  .skills__items {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .portfolio__btns {
+    margin: auto;
+  }
+  .contacts__wrapper {
+    padding-left: 400px;
+  }
+}
+
+@media (max-width: 956px) {
+  .portfolio__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 172px;
+    padding-bottom: 55px;
+  }
+  .portfolio__photos img {
+    margin: 0 auto;
+  }
+  .contacts__wrapper {
+    padding-left: 277px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 644px;
+    margin: 0 auto;
+  }
+  .header {
+    background-size: auto 620px;
+    background-position: -12px -31px;
+    padding: 20px 0;
+  }
+  .header__wrapper {
+    padding: 0;
+  }
+  .lang {
+    margin-left: auto;
+  }
+  .lang__ru {
+    margin-left: 10px;
+  }
+  .nav__list {
+    display: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav__list-active {
+    position: absolute;
+    top: 0;
+    left: 137px;
+    bottom: 0;
+    background-color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 134px;
+    padding-right: 375.55px;
+    padding-left: 101px;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .nav__item {
+    font-size: 34.8235px;
+    line-height: 73px;
+    margin-right: -41px;
+    margin-top: 1.6px;
+    margin-bottom: 16px;
+  }
+  .menu__btn {
+    margin-left: 20px;
+    display: block;
+  }
+  .hero {
+    background-position: -12px -120px;
+    background-size: auto 620px;
+  }
+  .hero__name {
+    font-size: 32px;
+    line-height: 64px;
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 78px;
+    margin-bottom: 20px;
+    margin-left: -1px;
+  }
+  .hero__desc {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 390px;
+    margin-bottom: 60px;
+  }
+  .hero__button {
+    padding: 7px 73px;
+  }
+  .hero__wrapper {
+    padding: 0;
+    padding-bottom: 152px;
+  }
+  .skills {
+    padding-top: 80px;
+  }
+  .skills__title {
+    width: 58%;
+  }
+  .skills__items {
+    padding-top: 45px;
+    padding-left: 4px;
+    padding-right: 3px;
+  }
+  .skills__item {
+    max-width: 280px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 67px;
+  }
+  .skills__item h3 {
+    margin-top: -20px;
+    margin-bottom: 21px;
+  }
+  .skills__item p {
+    max-width: 280px;
+    line-height: 22px;
+  }
+  .section__name {
+    font-size: 32px;
+  }
+  .portfolio {
+    padding-top: 84px;
+  }
+  .portfolio__section-title {
+    width: 51.8%;
+    margin-bottom: 50px;
+  }
+  .portfolio__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 0;
+    margin-left: 102px;
+    padding-bottom: 55px;
+  }
+  .portfolio__btn {
+    margin-bottom: 5px;
+  }
+  .portfolio__photos {
+    padding: 0px 97px;
+  }
+  .video {
+    padding: 80px 0px;
+  }
+  .video .section__title {
+    width: 48.8%;
+  }
+  .video .container {
+    max-width: none;
+  }
+  .video__player {
+    padding: 0;
+  }
+  .video__player img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    -o-object-position: 0px bottom;
+       object-position: 0px bottom;
+    height: 418px;
+  }
+  .video__btn {
+    top: 168px;
+  }
+  .video__btn svg {
+    height: 65px;
+  }
+  .price {
+    padding-bottom: 30px;
+  }
+  .price .section__title {
+    width: 48.8%;
+  }
+  .price__wrapper {
+    padding: 0px 112px;
+  }
+  .price__card {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 99px;
+    padding-right: 94px;
+    margin-bottom: 50px;
+  }
+  .contacts {
+    padding-top: 52px;
+    padding-bottom: 112px;
+    background-position: -233px 0px;
+    background-size: 1215px 602px;
+  }
+  .contacts__wrapper {
+    padding: 0 99px;
+  }
+  .contacts__title {
+    font-size: 32px;
+    text-align: center;
+    margin-left: 5px;
+    margin-bottom: 32px;
+  }
+  .contacts__btn {
+    margin-left: 115px;
+  }
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px 0px;
+  }
+  .footer__rs span {
+    margin-left: 0;
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: -20px;
+    margin-bottom: 5px;
+  }
+  .footer__network {
+    max-width: 188px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 648px) {
+  .container {
+    max-width: 500px;
+  }
+  .header {
+    background-position: top;
+  }
+  .hero {
+    background-position: center -89px;
+  }
+  .hero__name {
+    padding-top: 203px;
+  }
+  .skills {
+    padding-top: 0;
+  }
+  .skills__title {
+    width: 92%;
+  }
+  .portfolio__photos {
+    padding: 0;
+  }
+  .portfolio__photos img {
+    padding: 0;
+    width: 100%;
+  }
+  .video__player img {
+    height: auto;
+  }
+  .video__btn {
+    top: 50%;
+    right: 50%;
+  }
+  .video__btn svg {
+    height: 47px;
+  }
+  .price__wrapper {
+    padding: 0;
+  }
+  .price__card {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+  }
+  .contacts__wrapper {
+    padding: 0;
+  }
+  .contacts__wrapper input {
+    max-width: 300px;
+    margin-left: 30px;
+  }
+  .contacts__textarea {
+    max-width: 300px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 512px) {
+  .container {
+    max-width: 400px;
+  }
+  .portfolio__btns {
+    margin-left: 87px;
+  }
+  .contacts__wrapper {
+    padding: 0;
+  }
+  .contacts__wrapper input {
+    max-width: 280px;
+    margin-left: 20px;
+  }
+  .contacts__textarea {
+    max-width: 280px;
+    margin-left: 20px;
+  }
+  .contacts__btn {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 412px) {
+  .container {
+    max-width: 310px;
+  }
+  .portfolio__btns {
+    margin-left: 49px;
+  }
+  .portfolio__btn {
+    margin: 0;
+  }
+  .portfolio__photos img {
+    width: 37%;
+  }
+  .contacts__wrapper {
+    padding: 0;
+  }
+  .contacts__wrapper input {
+    max-width: 210px;
+    margin-left: 10px;
+  }
+  .contacts__textarea {
+    max-width: 210px;
+    margin-left: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
