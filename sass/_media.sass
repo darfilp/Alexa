@@ -45,21 +45,32 @@
         &__list-active
             position: absolute
             top: 0
-            left: 137px
+                /* width: 590px; */
+            left: 142px
             bottom: 0
+            right: 0
             background-color: #000000
+                /* display: -webkit-box; */
+            display: -ms-flexbox
             display: flex
+                /* -webkit-box-orient: vertical; */
+                /* -webkit-box-direction: normal; */
+            -ms-flex-direction: column
             flex-direction: column
-            padding-top: 134px
-            padding-right: 375.55px
-            padding-left: 101px
+            padding-top: 131px
+            padding-right: 387.55px
+            padding-left: 97px
+            -webkit-box-align: normal
+            -ms-flex-align: normal
             align-items: normal
+            margin: 0
         &__item
             font-size: 34.8235px
             line-height: 73px
-            margin-right: -41px
-            margin-top: 1.6px
-            margin-bottom: 16px
+            margin-left: 29px
+            margin-bottom: 15px
+        &__item:nth-child(1)
+            margin-top: 3.6px
     .menu__btn
         margin-left: 20px
         display: block
@@ -183,6 +194,9 @@
         max-width: 500px
     .header
         background-position: top
+    .nav
+        &__list-active
+            padding-right: 0
     .hero
         background-position: center -89px
         &__name
@@ -221,6 +235,12 @@
         &__textarea
             max-width: 300px
             margin-left: 30px
+@media (max-width: 619px)
+    .nav
+        &__list-active
+            left: 0
+            padding-left: 0
+            align-items: center
 @media (max-width: 512px)
     .container
         max-width: 400px
