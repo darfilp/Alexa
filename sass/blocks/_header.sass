@@ -17,6 +17,7 @@
     height: 50px
     fill: #ffffff
     vertical-align: middle
+    transition: 0.3s
     &:hover
         fill: #BDAE82
 .nav
@@ -38,8 +39,19 @@
     font-weight: bold
     font-size: 20px
     line-height: 50px
+    color: #ffffff
+    text-transform: uppercase
+    margin-right: 35px
     &__en
+        text-decoration: none
+        color: #ffffff
+    &__ru
+        text-decoration: none
+        color: #ffffff
+    &--active
         color: #BDAE82
+.toggle
+    cursor: pointer
 .menu
     &__btn
         width: 50px
