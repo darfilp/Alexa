@@ -1,15 +1,14 @@
 .video
     padding: 100px 20px
     &__player
-        padding: 0 20px 0px 20px
+        margin-left: 20px
+        margin-right: 20px
         position: relative
-        display: flex
-        justify-content: center
-        align-items: center
+        //border: 1px solid #bdae82
+        background-color: black
         img
-            position: relative
             width: 100%
-            height: 705px
+            height: auto
         button
     &__btn
         background-color: transparent
@@ -22,5 +21,153 @@
             z-index: 11
             width: 129.86px
             height: 130px
-    &__btn:hover
-        transform: scale(1.1)
+            transition: fill .4s ease
+    &__viewer
+        width: 100%
+        height: auto
+        display: none
+        //z-index: -1
+    &__control
+        &-volume
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            margin-right: 22px
+    &__backward
+        fill: #B3B3B3
+        width: 27px
+        height: 30px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        transition: fill .4s ease
+        padding: 0
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 30px
+            height: 30px
+    &__pause
+        fill: #B3B3B3
+        width: 22px
+        height: 30px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        transition: fill .4s ease
+        padding: 0
+        display: none
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 30px
+            height: 30px
+    &__play
+        fill: #B3B3B3
+        width: 22px
+        height: 30px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        transition: fill .4s ease
+        padding: 0
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 30px
+            height: 30px
+    &__forward
+        fill: #B3B3B3
+        width: 30px
+        height: 30px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        padding: 0
+        transition: fill .4s ease
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 30px
+            height: 30px
+    &__volume
+        fill: #B3B3B3
+        width: 40px
+        height: 30px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        padding: 0
+        margin-right: 21px
+        transition: fill .4s ease
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 40px
+            height: 30px
+    &__mute
+        fill: #B3B3B3
+        width: 40px
+        height: 30px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        padding: 0
+        margin-right: 21px
+        transition: fill .4s ease
+        display: none
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 40px
+            height: 30px
+    &__time
+        margin-top: 14px
+        border-radius: 0px
+        width: 820px
+        margin-left: 0px
+    &__scale
+        width: 155px
+        background: linear-gradient( to right, #bdae82 0%, #bdae82 0%, #c8c8c8 0%, #c8c8c8 100% )
+    &__screen
+        fill: #B3B3B3
+        width: 38px
+        height: 35px
+        background-color: transparent
+        border: none
+        cursor: pointer
+        padding: 0
+        margin-right: 0
+        transition: fill .4s ease
+        &:hover
+            fill: #BDAE82
+        svg
+            width: 38px
+            height: 35px
+.control
+    display: flex
+    background-color: #000000
+    margin: 0 31px
+    padding: 10px 0
+    display: none
+    &-btn
+        margin-right: 41px
+    &-btn:nth-child(3)
+        margin-right: 41px
+    &-btn:nth-child(2)
+        margin-right: 41px
+.slider
+    border-radius: 0px
+    height: 8px
+    outline: none
+    transition: background 450ms ease-in
+    margin-right: 41px
+    -webkit-appearance: none
+    background: linear-gradient( to right, #bdae82 0%, #bdae82 0%, #c8c8c8 0%, #c8c8c8 100% )
+    &::-webkit-slider-thumb
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        -webkit-appearance: none
+        cursor: ew-resize
+        background: #fff

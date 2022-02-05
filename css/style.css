@@ -383,7 +383,7 @@ button {
   transition: 0.25s;
 }
 
-button:hover, button:focus {
+.button__effect:hover, .button__effect:focus {
   -webkit-transition: 0.25s;
   transition: 0.25s;
   color: #fff;
@@ -411,6 +411,11 @@ button:hover, button:focus {
 
 .section__name-span {
   background-color: #000000;
+}
+
+input[type=range] {
+  background: -webkit-gradient(linear, left top, right top, from(#bdae82), color-stop(61%, #bdae82), color-stop(61%, #c8c8c8), to(#c8c8c8));
+  background: linear-gradient(to right, #bdae82 0%, #bdae82 61%, #c8c8c8 61%, #c8c8c8 100%);
 }
 
 .header {
@@ -445,8 +450,8 @@ button:hover, button:focus {
   height: 50px;
   fill: #ffffff;
   vertical-align: middle;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
 }
 
 .icon:hover {
@@ -728,23 +733,15 @@ button:hover, button:focus {
 }
 
 .video__player {
-  padding: 0 20px 0px 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: black;
 }
 
 .video__player img {
-  position: relative;
   width: 100%;
-  height: 705px;
+  height: auto;
 }
 
 .video__btn {
@@ -763,11 +760,232 @@ button:hover, button:focus {
   z-index: 11;
   width: 129.86px;
   height: 130px;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
 }
 
-.video__btn:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.video__viewer {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.video__control-volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 22px;
+}
+
+.video__backward {
+  fill: #B3B3B3;
+  width: 27px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+  padding: 0;
+}
+
+.video__backward:hover {
+  fill: #BDAE82;
+}
+
+.video__backward svg {
+  width: 30px;
+  height: 30px;
+}
+
+.video__pause {
+  fill: #B3B3B3;
+  width: 22px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+  padding: 0;
+  display: none;
+}
+
+.video__pause:hover {
+  fill: #BDAE82;
+}
+
+.video__pause svg {
+  width: 30px;
+  height: 30px;
+}
+
+.video__play {
+  fill: #B3B3B3;
+  width: 22px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+  padding: 0;
+}
+
+.video__play:hover {
+  fill: #BDAE82;
+}
+
+.video__play svg {
+  width: 30px;
+  height: 30px;
+}
+
+.video__forward {
+  fill: #B3B3B3;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+}
+
+.video__forward:hover {
+  fill: #BDAE82;
+}
+
+.video__forward svg {
+  width: 30px;
+  height: 30px;
+}
+
+.video__volume {
+  fill: #B3B3B3;
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 21px;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+}
+
+.video__volume:hover {
+  fill: #BDAE82;
+}
+
+.video__volume svg {
+  width: 40px;
+  height: 30px;
+}
+
+.video__mute {
+  fill: #B3B3B3;
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 21px;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+  display: none;
+}
+
+.video__mute:hover {
+  fill: #BDAE82;
+}
+
+.video__mute svg {
+  width: 40px;
+  height: 30px;
+}
+
+.video__time {
+  margin-top: 14px;
+  border-radius: 0px;
+  width: 820px;
+  margin-left: 0px;
+}
+
+.video__scale {
+  width: 155px;
+  background: -webkit-gradient(linear, left top, right top, from(#bdae82), color-stop(0%, #bdae82), color-stop(0%, #c8c8c8), to(#c8c8c8));
+  background: linear-gradient(to right, #bdae82 0%, #bdae82 0%, #c8c8c8 0%, #c8c8c8 100%);
+}
+
+.video__screen {
+  fill: #B3B3B3;
+  width: 38px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0;
+  -webkit-transition: fill .4s ease;
+  transition: fill .4s ease;
+}
+
+.video__screen:hover {
+  fill: #BDAE82;
+}
+
+.video__screen svg {
+  width: 38px;
+  height: 35px;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000000;
+  margin: 0 31px;
+  padding: 10px 0;
+  display: none;
+}
+
+.control-btn {
+  margin-right: 41px;
+}
+
+.control-btn:nth-child(3) {
+  margin-right: 41px;
+}
+
+.control-btn:nth-child(2) {
+  margin-right: 41px;
+}
+
+.slider {
+  border-radius: 0px;
+  height: 8px;
+  outline: none;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
+  margin-right: 41px;
+  -webkit-appearance: none;
+  background: -webkit-gradient(linear, left top, right top, from(#bdae82), color-stop(0%, #bdae82), color-stop(0%, #c8c8c8), to(#c8c8c8));
+  background: linear-gradient(to right, #bdae82 0%, #bdae82 0%, #c8c8c8 0%, #c8c8c8 100%);
+}
+
+.slider::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #fff;
 }
 
 .price {
@@ -953,6 +1171,11 @@ button:hover, button:focus {
   line-height: 50px;
 }
 
+.footer__year span a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .footer__network {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -975,6 +1198,11 @@ button:hover, button:focus {
 
 .footer__icon {
   width: 32px;
+}
+
+.footer__img {
+  background-color: #313131;
+  width: 200px;
 }
 
 @media (max-width: 1439px) {
@@ -1425,5 +1653,9 @@ button:hover, button:focus {
 .textarea-mode {
   background: rgba(255, 255, 255, 0.5);
   color: #1C1C1C;
+}
+
+.color-mode {
+  color: #BDAE82;
 }
 /*# sourceMappingURL=style.css.map */
